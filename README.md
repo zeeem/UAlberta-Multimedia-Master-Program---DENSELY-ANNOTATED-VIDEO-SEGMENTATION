@@ -5,7 +5,7 @@ We have increased the accuracy of OSVOS by ~4.18% implementing BubbleNets and Im
 ### Installation:
 1. Clone the repository
    ```Shell
-   git clone https://github.com/zeeem/UAlberta-Multimedia-Master-Program---DENSELY-ANNOTATED-VIDEO-SEGMENTATION.git
+   git clone https://github.com/zeeem/UAlberta-Multimedia-Master-Program-DENSELY-ANNOTATED-VIDEO-SEGMENTATION.git
    ```
 2. Install if necessary the required dependencies:
    
@@ -59,6 +59,6 @@ You will get the best frame suggestion for the videos from BubbleNets to use in 
 5. Edit the 'User defined parameters' (eg. gpu_id) in file `osvos_parent_demo.py`.
 6. Run `python osvos_parent_demo.py`. This step takes 20 hours to train (Titan-X Pascal), and ~15GB for loading data and online data augmentation. Change dataset.py accordingly, to adjust to a less memory-intensive setup.
 
-Have a happy training!
 
-If needed, please contact me at rahmanje[at]ualberta[dot]ca
+video demonstration: https://youtu.be/e7tclBV6ktU
+If needed, please contact me at rahmanje[at]ualberta[dot]ca, subho[at]ualberta[dot]ca.
