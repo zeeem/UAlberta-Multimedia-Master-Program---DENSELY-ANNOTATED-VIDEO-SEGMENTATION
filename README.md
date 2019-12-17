@@ -1,35 +1,46 @@
-# OSVOS: One-Shot Video Object Segmentation
-Check our [project page](http://www.vision.ee.ethz.ch/~cvlsegmentation/osvos) for additional information.
-![OSVOS](doc/ims/osvos.png)
+# DENSELY-ANNOTATED-VIDEO-SEGMENTATION using OSVOS: One-Shot Video Object Segmentation
 
-OSVOS is a method that tackles the task of semi-supervised video object segmentation. It is based on a fully-convolutional neural network architecture that is able to successively transfer generic semantic information, learned on ImageNet, to the task of foreground segmentation, and finally to learning the appearance of a single annotated object of the test sequence (hence one-shot). Experiments on DAVIS 2016 show that OSVOS is faster than currently available techniques and improves the state of the art by a significant margin (79.8% vs 68.0%).
-
-
-This TensorFlow code is a posteriori implementation of OSVOS and it does not contain the boundary snapping branch. The results published in the paper were obtained using the Caffe version that can be found at [OSVOS-caffe](https://github.com/kmaninis/OSVOS-caffe).
-
-#### NEW: PyTorch implementation also available: [OSVOS-PyTorch](https://github.com/kmaninis/OSVOS-PyTorch)!
+We have increased the accuracy of OSVOS by ~6% implementing BubbleNets and Image Augmentation in the online training/testing part.
 
 ### Installation:
-1. Clone the OSVOS-TensorFlow repository
+1. Clone the repository
    ```Shell
-   git clone https://github.com/scaelles/OSVOS-TensorFlow.git
+   git clone https://github.com/zeeem/UAlberta-Multimedia-Master-Program---DENSELY-ANNOTATED-VIDEO-SEGMENTATION.git
    ```
 2. Install if necessary the required dependencies:
    
-   - Python 2.7, Python 3 (thanks to [@xoltar](https://github.com/xoltar))
+   - Python 3
    - Tensorflow r1.0 or higher (`pip install tensorflow-gpu`) along with standard [dependencies](https://www.tensorflow.org/install/install_linux)
-   - Other python dependencies: PIL (Pillow version), numpy, scipy, matplotlib, six
+   - Other python dependencies: PIL (Pillow version), numpy, scipy 1.2, matplotlib, six
    
-3. Download the parent model from [here](https://data.vision.ee.ethz.ch/csergi/share/OSVOS/OSVOS_parent_model.zip) (55 MB) and unzip it under `models/` (It should create a folder named 'OSVOS_parent').
+3. Download the model and Data files from [here](https://drive.google.com/file/d/1PPPsyiLB3gr1TJL9PZXtC8YsYUL8mC2k/view?usp=sharing) (3GB) and unzip it (It should create a folder named 'data, DAVIS, model and methods') under the main directory and replace if needed.
 
-4. All the steps to re-train OSVOS are provided in this repository. In case you would like to test with the pre-trained models, you can download them from  [here](https://data.vision.ee.ethz.ch/csergi/share/OSVOS/OSVOS_pre-trained_models.zip) (2.2GB) and unzip them under `models/` (It should create a folder for every model).
 
-### Demo online training and testing
+### online training and testing
 1. Edit in file `osvos_demo.py` the 'User defined parameters' (eg. gpu_id, train_model, etc).
 
-2. Run `python osvos_demo.py`.
+2. Run `!python osvos_demo.py 'scooter-black' 'base' '00000'`.
+here, 
+argv1: seq_name = "scooter-black"
+argv2: base/with_aug/bubblenets (test type)
+argv3: bubbleNets frame = 00032
 
-It is possible to work with all sequences of DAVIS 2016 just by creating a soft link (`ln -s /path/to/DAVIS/  DAVIS`) in the root folder of the project.
+for argv1, you can find the video names below:
+`blackswan
+car-shadow
+bmx-trees
+breakdance
+camel
+car-roundabout
+cows
+dog
+goat
+horsejump-high
+paragliding-launch
+parkour
+scooter-black
+soapbox
+`
 
 ### Training the parent network (optional)
 1. All the training sequences of DAVIS 2016 are required to train the parent model, thus download it from [here](https://graphics.ethz.ch/Downloads/Data/Davis/DAVIS-data.zip) if you don't have it. 
@@ -48,4 +59,4 @@ Have a happy training!
 	  Booktitle      = {Computer Vision and Pattern Recognition (CVPR)},
 	  Year           = {2017}
 	}
-If you encounter any problems with the code, want to report bugs, etc. please contact me at scaelles[at]vision[dot]ee[dot]ethz[dot]ch.
+If needed, please contact me at rahmanje[at]ualberta[dot]ca
