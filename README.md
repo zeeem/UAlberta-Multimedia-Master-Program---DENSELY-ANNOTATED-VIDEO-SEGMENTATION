@@ -1,6 +1,6 @@
 # DENSELY-ANNOTATED-VIDEO-SEGMENTATION using OSVOS: One-Shot Video Object Segmentation
 
-We have increased the accuracy of OSVOS by ~6% implementing BubbleNets and Image Augmentation in the online training/testing part.
+We have increased the accuracy of OSVOS by ~4.18% implementing BubbleNets and Image Augmentation in the online training/testing part.
 
 ### Installation:
 1. Clone the repository
