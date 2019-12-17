@@ -16,14 +16,22 @@ We have increased the accuracy of OSVOS by ~6% implementing BubbleNets and Image
 3. Download the model and Data files from [here](https://drive.google.com/file/d/1PPPsyiLB3gr1TJL9PZXtC8YsYUL8mC2k/view?usp=sharing) (3GB) and unzip it (It should create a folder named 'data, DAVIS, model and methods') under the main directory and replace if needed.
 
 
-### online training and testing
-1. Edit in file `osvos_demo.py` the 'User defined parameters' (eg. gpu_id, train_model, etc).
+### to get the best frame for each video seq, run the BubbleNets
+	`!python bubblenets_select_frame.py`
+You will get the best frame suggestion for the videos from BubbleNets to use in the `argv3`.
 
-2. Run `!python osvos_demo.py 'scooter-black' 'base' '00000'`.
-here, 
-argv1: seq_name = "scooter-black"
-argv2: base/with_aug/bubblenets (test type)
-argv3: bubbleNets frame = 00032
+
+### online training and testing
+1. If needed, edit in file `osvos_demo.py` the 'User defined parameters' (eg. gpu_id, train_model, etc).
+
+2. Run 
+	`!python osvos_demo.py 'scooter-black' 'base' '00000'`
+	
+	
+#### here, 
+	argv1: seq_name = "scooter-black",
+	argv2: base/with_aug/bubblenets (test type),
+	argv3: for using the first frame, value is "00000" and for best frame from bubbleNets value should be the frame number i.e. "00032".
 
 ### for argv1, you can find the video names below:
 	`blackswan,
