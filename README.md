@@ -29,12 +29,13 @@ You will get the best frame suggestion for the videos from BubbleNets to use in 
 	
 	
 #### here, 
-	argv1: seq_name = "scooter-black",
+	argv1: sequence_name = "scooter-black",
 	argv2: base/with_aug/bubblenets (test type),
-	argv3: for using the first frame, value is "00000" and for best frame from bubbleNets value should be the frame number i.e. "00032".
+	argv3: for using the first frame: value is "00000" and 
+		for best frame from bubbleNets: value should be the frame number i.e. "00032".
 
 ### for argv1, you can find the video names below:
-	`blackswan,
+	blackswan,
 	car-shadow,
 	bmx-trees,
 	breakdance,
@@ -48,7 +49,7 @@ You will get the best frame suggestion for the videos from BubbleNets to use in 
 	parkour,
 	scooter-black,
 	soapbox
-	`
+
 
 ### Training the parent network (optional)
 1. All the training sequences of DAVIS 2016 are required to train the parent model, thus download it from [here](https://graphics.ethz.ch/Downloads/Data/Davis/DAVIS-data.zip) if you don't have it. 
