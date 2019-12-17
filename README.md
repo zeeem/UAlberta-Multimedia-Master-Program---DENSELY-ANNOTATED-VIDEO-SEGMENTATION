@@ -25,22 +25,22 @@ argv1: seq_name = "scooter-black"
 argv2: base/with_aug/bubblenets (test type)
 argv3: bubbleNets frame = 00032
 
-for argv1, you can find the video names below:
-`blackswan
-car-shadow
-bmx-trees
-breakdance
-camel
-car-roundabout
-cows
-dog
-goat
-horsejump-high
-paragliding-launch
-parkour
-scooter-black
-soapbox
-`
+### for argv1, you can find the video names below:
+	`blackswan,
+	car-shadow,
+	bmx-trees,
+	breakdance,
+	camel,
+	car-roundabout,
+	cows,
+	dog,
+	goat,
+	horsejump-high,
+	paragliding-launch,
+	parkour,
+	scooter-black,
+	soapbox
+	`
 
 ### Training the parent network (optional)
 1. All the training sequences of DAVIS 2016 are required to train the parent model, thus download it from [here](https://graphics.ethz.ch/Downloads/Data/Davis/DAVIS-data.zip) if you don't have it. 
@@ -52,11 +52,4 @@ soapbox
 
 Have a happy training!
 
-### Citation:
-	@Inproceedings{Cae+17,
-	  Title          = {One-Shot Video Object Segmentation},
-	  Author         = {S. Caelles and K.K. Maninis and J. Pont-Tuset and L. Leal-Taix\'e and D. Cremers and L. {Van Gool}},
-	  Booktitle      = {Computer Vision and Pattern Recognition (CVPR)},
-	  Year           = {2017}
-	}
 If needed, please contact me at rahmanje[at]ualberta[dot]ca
