@@ -61,4 +61,5 @@ You will get the best frame suggestion for the videos from BubbleNets to use in 
 
 
 video demonstration: https://youtu.be/e7tclBV6ktU
+
 If needed, please contact me at rahmanje[at]ualberta[dot]ca, subho[at]ualberta[dot]ca.
