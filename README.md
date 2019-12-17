@@ -11,13 +11,13 @@ We have increased the accuracy of OSVOS by ~4.18% implementing BubbleNets and Im
    
    - Python 3
    - Tensorflow r1.0 or higher (`pip install tensorflow-gpu`) along with standard [dependencies](https://www.tensorflow.org/install/install_linux)
-   - Other python dependencies: PIL (Pillow version), numpy, scipy 1.2, matplotlib, six
+   - Other python dependencies: PIL (Pillow version), numpy, scipy 1.2, matplotlib, openCV
    
 3. Download the model and Data files from [here](https://drive.google.com/file/d/1PPPsyiLB3gr1TJL9PZXtC8YsYUL8mC2k/view?usp=sharing) (3GB) and unzip it (It should create a folder named 'data, DAVIS, model and methods') under the main directory and replace if needed.
 
 
 ### to get the best frame for each video seq, run the BubbleNets
-	`!python bubblenets_select_frame.py`
+	!python bubblenets_select_frame.py
 You will get the best frame suggestion for the videos from BubbleNets to use in the `argv3`.
 
 
